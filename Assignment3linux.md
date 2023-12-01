@@ -66,9 +66,9 @@ sudo apt install nginx
 ```
 # Configure Nginx to Serve a Sample Website
 
-create the directory ```my-site``` in ```/var/www``` with ```sudo mkdir my-site```.
+Create the directory ```my-site``` in ```/var/www``` with ```sudo mkdir my-site```.
 
-create the document ```index.html``` in the ```my-site``` directory with ```sudo vim index.html```.
+Create the document ```index.html``` in the ```my-site``` directory with ```sudo vim index.html```.
 
 Copy and paste the following code into the ```index.html``` file:
 ```
@@ -96,15 +96,14 @@ Copy and paste the following code into the ```index.html``` file:
 </body>
 </html>
 ```
-save and close the file.    
+Save and close the file.    
 
 # Create a new Nginx server block configuration file
 Change the directory with ```cd /etc/nginx/sites-available```.
-Create the file ```my-site.conf``` in the ```sites-available``` directory with ```sudo vim my-site.conf```
+Create the file ```my-site.conf``` in the ```sites-available``` directory with ```sudo vim my-site.conf```.
 
 Replace the content with the following configuration:
 
-nginx
 ```
 server {
     listen 80 default_server;
@@ -123,7 +122,7 @@ server {
 
 Save and exit the editor.
 
-Now enter the command: ```sudo ln-s /etc/nginx/sites-available/my-site.conf /etc/nginx/sites-enabled/```
+Now enter the command: ```sudo ln-s /etc/nginx/sites-available/my-site.conf /etc/nginx/sites-enabled/```.
 
 Run the command ```sudo nginx -t``` to test the nginx configurations.
 
